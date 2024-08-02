@@ -7,8 +7,8 @@ inputs:
     default: '${{ github.repository }}'
   createprofile:  # id of input
     description: 'createprofile'
-    required: true
-    default: true
+    required: false
+   
   filepath:  # id of input
     description: 'filepath'
     required: true
