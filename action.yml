@@ -9,10 +9,10 @@ inputs:
     description: 'createprofile'
     required: false
    
-  filepath:  # id of input
+  filepath:  'binaries_to_upload/hello.jar'
     description: 'filepath'
     required: true
-  version:  # id of input
+  version:  ${{ github.run_id }}'
     description: 'version'
     required: true
     default: 'Scan from Github job: ${{ github.run_id }}-${{ github.run_number }}-${{ github.run_attempt }}'
