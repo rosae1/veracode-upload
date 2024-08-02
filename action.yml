@@ -17,10 +17,10 @@ inputs:
     required: true
     default: 'Scan from Github job: ${{ github.run_id }}-${{ github.run_number }}-${{ github.run_attempt }}'
   vid:  # id of input
-    description: 'vid'
+    description: ${{ secrets.VID }}
     required: true
   vkey:  # id of input
-    description: 'vkey'
+    description:${{ secrets.VKEY }}
     required: true
   createsandbox: 
     description: 'true or false'
