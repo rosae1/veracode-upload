@@ -5,7 +5,7 @@ inputs:
     description: 'appname'
     required: true
     default: '${{ github.repository }}'
-  createprofile:  # id of input
+  createprofile: 'github'
     description: 'createprofile'
     required: false
    
@@ -16,11 +16,11 @@ inputs:
     description: 'version'
     required: true
     default: 'Scan from Github job: ${{ github.run_id }}-${{ github.run_number }}-${{ github.run_attempt }}'
-  vid:  # id of input
-    description: ${{ secrets.VID }}
+  vid:  ${{ secrets.VID }}
+    description: 'id'
     required: true
-  vkey:  # id of input
-    description:${{ secrets.VKEY }}
+  vkey: ${{ secrets.VKEY }}
+    description: 'vkey'
     required: true
   createsandbox: 
     description: 'true or false'
@@ -37,9 +37,9 @@ inputs:
   include:
     description: 'modules to include in module selection'
     required: false
-  criticality:
+  criticality: 'VeryHigh'
     description: 'business criticality - policy selection'
-    required: false
+    required: true
   pattern:
     description: 'filename pattern'
     required: false
