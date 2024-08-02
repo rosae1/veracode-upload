@@ -4,10 +4,10 @@ uses: veracode/veracode-uploadandscan-action@0.2.7
             
 description: 'Upload files to veracode and start a static scan.'
 inputs:
-  appname:  # id of input
+  appname: 'pruebasGit'
     description: 'appname'
     required: true
-    default: '${{ github.repository }}'
+    
   createprofile: 'github'
     description: 'createprofile'
     required: false
