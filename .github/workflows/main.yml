@@ -35,7 +35,7 @@ jobs:
       with:
         appname: 'github'
         version: '${{ github.run_id }}'
-        filepath: 'binaries_to_upload/*.jar'
+        filepath: 'binaries_to_upload/*.war'
         vid: '${{ secrets.VID }}'
         vkey: '${{ secrets.VKEY }}'
         createsandbox: false
