@@ -4,25 +4,25 @@ uses: veracode/veracode-uploadandscan-action@0.2.7
             
 description: 'Upload files to veracode and start a static scan.'
 inputs:
-  appname: 'github'
+  appname: 
     description: 'appname' 
     required: true
     
-  createprofile: 'github'
+  createprofile:
     description: 'createprofile'
     required: false
    
-  filepath:  'binaries_to_upload/hello.jar'
+  filepath:  
     description: 'filepath'
     required: true
-  version:  ${{ github.run_id }}'
+  version: 
     description: 'version'
     required: true
     default: 'Scan from Github job: ${{ github.run_id }}-${{ github.run_number }}-${{ github.run_attempt }}'
-  vid:  ${{ secrets.VID }}
+  vid: 
     description: 'id'
     required: true
-  vkey: ${{ secrets.VKEY }}
+  vkey: 
     description: 'vkey'
     required: true
   createsandbox: 
@@ -40,7 +40,7 @@ inputs:
   include:
     description: 'modules to include in module selection'
     required: false
-  criticality: 'VeryHigh'
+  criticality: 
     description: 'business criticality - policy selection'
     required: true
   pattern:
@@ -99,8 +99,8 @@ runs:
     - ${{ inputs.createprofile }}
     - ${{ inputs.filepath }}
     - ${{ inputs.version }}
-    - ${{ inputs.vid }}
-    - ${{ inputs.vkey }}
+    - ${{ inputs.VID }}
+    - ${{ inputs.VKEY }}
     - ${{ inputs.createsandbox}}
     - ${{ inputs.sandboxname }}
     - ${{ inputs.scantimeout }}
