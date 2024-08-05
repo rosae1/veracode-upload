@@ -39,7 +39,7 @@ jobs:
         vid: '${{ secrets.VID }}'
         vkey: '${{ secrets.VKEY }}'
         createsandbox: false
-        sandboxname: 'Github - ${{ github.ref }}'
+       # sandboxname: 'Github - ${{ github.ref }}'
         scantimeout: 15
         criticality: 'VeryHigh'
         createprofile: false
