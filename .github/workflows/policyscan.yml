@@ -25,7 +25,7 @@ jobs:
           
       # zip the project and move it to a staging directory
       - name: Zip Project
-        run: zip -R project.zip '*.py' '*.html' '*.htm' '*.js' '*.php' 'requirements.txt' '*.json' '*.lock' '*.ts' '*.pl' '*.pm' '*.plx' '*.pl5' '*.cgi' '*.go' '*.sum' '*.mod'
+        run: zip -R project.zip '*.py' '*.war' '*.html' '*.htm' '*.js' '*.php' 'requirements.txt' '*.json' '*.lock' '*.ts' '*.pl' '*.pm' '*.plx' '*.pl5' '*.cgi' '*.go' '*.sum' '*.mod'
         env:
           build-name: project.zip
       - uses: actions/upload-artifact@v3 # Copy files from repository to docker container so the next uploadandscan action can access them.
@@ -34,12 +34,12 @@ jobs:
       - uses: veracode/veracode-uploadandscan-action@master # Run the uploadandscan action. Inputs are described above.
         with:
 
-          appname: 'github'
+          # appname: 'github'
           version: '${{ github.run_id }}'
-          # appname: '${{ github.repository }}'
+          appname: '${{ github.repository }}'
           # version: '${{ github.run_id }}'
-           #  filepath: 'project.zip'
-          filepath: 'binaries_to_upload/*.war'
+          filepath: 'project.zip'
+      
           vid: '${{ secrets.VID }}'
           vkey: '${{ secrets.VKEY }}'
           scantimeout: 15
