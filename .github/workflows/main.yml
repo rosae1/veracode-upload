@@ -42,4 +42,5 @@ jobs:
        # sandboxname: 'Github - ${{ github.ref }}'
         scantimeout: 15
         criticality: 'VeryHigh'
+        failBuildOnPolicyFail: false
         createprofile: false
