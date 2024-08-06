@@ -7,8 +7,8 @@ inputs:
   appname: 
     description: 'appname' 
     required: true
-   failBuildOnPolicyFail:  
-   required : false
+   failBuildOnPolicyFail:  'false'
+   required : true
   createprofile:
     description: 'createprofile'
     required: false
